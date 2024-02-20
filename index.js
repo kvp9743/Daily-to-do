@@ -11,7 +11,9 @@ const search_bar = document.querySelector(".search");
 let modalflag= false;
 let priorityColorSelected="lightpink";
 
+
 let ticketArr = [];
+if(localStorage.getItem("tasks"))
 ticketArr = JSON.parse(localStorage.getItem("tasks"));
 console.log(ticketArr);
 
