@@ -16,6 +16,7 @@ ticketArr = JSON.parse(localStorage.getItem("tasks"));
 console.log(ticketArr);
 
 //re-creating the stored tickets
+if(ticketArr!=null)
 ticketArr.forEach((ticket)=>{
     createTicket(ticket.ticketContent,ticket.ticketColor,ticket.ticketId);
 
