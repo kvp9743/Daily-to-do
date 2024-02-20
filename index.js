@@ -60,7 +60,7 @@ function createTicket(ticketContent,ticketColor,ticketId){
 
     const ticket = document.createElement("div");
         ticket.innerHTML=`<div class="ticket-color ${ticketColor}"></div>
-        <div class="ticket-id">Id:-${ticketId}</div>
+        <div class="ticket-id">${ticketId}</div>
         <div class="task-area"> ${ticketContent} </div>
         <div class="ticket-lock">
             <i class="fa-solid fa-lock"></i>
