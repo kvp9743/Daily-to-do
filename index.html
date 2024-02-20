@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;
+                700&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,
+                100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,
+                200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
+                rel="stylesheet">
+    <script src="https://kit.fontawesome.com/087b1c5952.js"
+     crossorigin="anonymous">
+    </script>
+    
+</head>
+<body style="background-color: bisque;">
+    <div class="toolbox-cont">
+        <div class="toolbox-priority-cont">
+            <div class="white color" >All</div>
+            <div class="lightpink color">To do</div>
+            <div class="lightgreen color">In progress</div>
+            <div class="lightblue color">To review</div>
+            <div class="black color">Done</div>
+        </div>
+        <div class="header">
+            <i class="fa-regular fa-square-check"></i>
+              Daily Todo
+        </div>
+        <div class="action-btn-cont">
+            <div class="btn-add">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="btn-delete">
+                <i class="fa-solid fa-trash"></i>
+            </div>
+        </div>
+    </div>
+    <div class="search-cont">
+        <input class="search" type="text"
+            placeholder="Search ticket"
+        >
+        <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    
+    <div class="main-ticket-cont">
+        <!-- <div class="ticket-cont">
+            <div class="ticket-color"></div>
+            <div class="ticket-id">12314141</div>
+            <div class="task-area"></div>
+            <div class="ticket-lock">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="modal-cont">
+        <textarea  class="textarea-cont"
+        placeholder="Enter your text here. Press L-alt to add task"
+        ></textarea>
+        <div class="priority-colors-cont">
+            <div class="lightpink priority-color"></div>
+            <div class="lightgreen priority-color"></div>
+            <div class="lightblue priority-color"></div>
+            <div class="black priority-color"></div>
+        </div>
+    </div>
+    
+    
+    <script src="./index.js"></script>
+</body>
+</html>
