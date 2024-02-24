@@ -6,14 +6,14 @@
 
 .header{
     
-    font-size: 40px; 
+    font-size: 2.5rem; 
     color: antiquewhite; 
-    padding: 20px 0; 
+    padding: 15px 0; 
     text-align: center; 
 }
 .toolbox-cont{
     background-color: #4b4b4b;
-    height:15vh;
+    height:6rem;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -21,6 +21,7 @@
     position: fixed;
     top: 0px;
     z-index: 4;
+    padding: 0 8px;;
     
 }
 
@@ -28,45 +29,45 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 3.5rem;
-    width: 30rem;
+    height: 4.5rem;
+    width: 45rem;
     background-color: #3d3d3d;
     border: 2px solid antiquewhite;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .action-btn-cont{
     display: flex;
-    justify-content: space-evenly;
-    height: 3.5rem;
-    width: 10rem;
+    justify-content: space-between;
+    height: 4.5rem;
+    width: 11rem;
     
 }
 
 .action-btn-cont>*{
-    width: 40%;
-    font-size: 2rem;
+    width: 45%;
+    font-size: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     color: antiquewhite;
     border: 2px solid antiquewhite;
     background-color: #3d3d3d;
-    border-radius: 15px;
+    border-radius: 25px;
     cursor: pointer;
 }
 .action-btn-cont>*:hover{
     box-shadow: 0px 3px 3px 0 whitesmoke, 0 4px 4px 0 whitesmoke;
     position: relative;
-    bottom: 2px;
+    bottom: 3px;
 }
 
 .color{
-    height: 1.5rem;
+    height: 2.5rem;
     min-width: 3rem;
     color: darkcyan;
     padding: 4px;
-    font-size: 15px;
+    font-size: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,7 +128,7 @@
     height: 100%;
     width: 75%;
     background-color: #dfe4ea;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-family: "Kalam", cursive;
     font-weight: 400;
     font-style: normal;
@@ -155,14 +156,16 @@
     align-items: center;
     font-weight: 600;
     border: 2px solid burlywood;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 .active-color{
-    box-shadow: 0px 2px 2px 0px antiquewhite, 0px 5px 5px 0px antiquewhite;
+    box-shadow: 0px 4px 6px 0px antiquewhite, 0px 4px 6px 0px antiquewhite;
     position: relative;
-    /* bottom: 2px; */
-    border: 3px solid burlywood;
-    border-radius: 25px;
+    height: 18%;
+    width: 90%;
+    bottom: 0px;
+    border: 4px solid burlywood;
+    border-radius: 30px;
 
 }
 
@@ -171,7 +174,6 @@
     top: 7rem;
     display: flex;
     justify-content: center;
-
 
 }
 .search{
@@ -183,13 +185,13 @@
     font-family: "Kalam", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
-    border-radius: 16px;
+    font-size: 1.25rem;
+    border-radius: 18px;
     background-color: antiquewhite;
 }
 #search-icon{
     
-    font-size: 26px;
+    font-size: 2rem;
     padding: 3px;
     color: rgba(0, 0, 0, 0.566);
     
@@ -216,10 +218,8 @@
 }
 .ticketForEdit{
     position: relative;
-    bottom: 15px;
-    box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.2), 10px 25px 25px 0px rgba(0, 0, 0, 0.19);
-    box-shadow: 15px 18px 18px 12px rgba(0, 0, 0, 0.2), 10px 35px 35px 10px rgba(0, 0, 0, 0.19)
-
+    bottom: 12px;
+    box-shadow: 15px 16px 14px 10px rgba(0, 0, 0, 0.2), 10px 35px 35px 10px rgba(0, 0, 0, 0.19);
     
 }
 .ticket-color{
@@ -231,21 +231,21 @@
 .ticket-id{
     height:20px;
     font-family: "Kalam", cursive;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
-    font-size: 18px;
-    padding:  3px;
+    font-size: 1rem;
+    padding:  4px;
     background-color: yellow;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 .task-area{
-    padding: 0.5rem;
+    padding: 5px;
     font-family: "Kalam", cursive;
-    font-weight: 400;
+    font-weight: 100;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .ticket-lock{
@@ -259,12 +259,16 @@
     font-size: 25px;
 }
 .ticket-during-delete{
-    border: 3px solid red;
-    box-shadow: 15px 15px 15px 0px rgb(223, 90, 90), 10px 25px 25px 0px rgb(223, 90, 90);
-    /* box-shadow: 15px 15px 15px 0px rgba(0, 0, 0, 0.2), 10px 25px 25px 0px rgba(0, 0, 0, 0.19); */
+    box-shadow: 6px 6px 6px 0px rgb(223, 90, 90), 6px 6px 6px 0px rgb(223, 90, 90);
 
+}
+
+.ticket-during-delete:hover{
+    border: 3px solid red;
+    box-shadow: 15px 15px 15px 5px rgb(223, 90, 90), 10px 25px 20px 0px rgb(223, 90, 90);
+    cursor: pointer;
     position: relative;
-    bottom: 4px;
+    bottom: 12px;
 
 }
 
@@ -273,21 +277,30 @@
 
     .toolbox-cont{
         flex-direction: column;
-        min-width: 7rem;
-        width: 18%;
+        justify-content: space-between;
+        min-width: 8rem;
+        width: 17%;
         height: 100vh;
-        z-index: 0;
-        padding-bottom: 1rem;
+        padding: 8px 0px;;
     }
     .toolbox-priority-cont{
         flex-direction: column;
-        height: 50%;
-        max-width: 10rem;
+        height: 70%;
+        justify-content: space-evenly;
+        padding: 2px;
         width: 96%;
     }
     .color{
-        min-width: 90%; 
+        min-width: 85%; 
+        max-width: 85%;
+        height: auto;
+        text-align: center;
+        font-size: 1.25rem;
+        padding: 0;
         
+    }
+    .header{
+        font-size: 2rem;
     }
     .search-cont{
         margin: 1rem 1rem 0 9rem;
@@ -295,40 +308,36 @@
         display: flex;
         justify-content: center;
     
-    
     }
     .search{
         width: 70%;
         
     }
     .main-ticket-cont{
-        min-width: 280px;
         height: 100%;
-        margin: 2rem 1rem 0 9rem;
-        justify-content: space-evenly;
-        align-content: flex-start;
-        gap: 2rem;
+        margin: 2rem 0rem 0 9rem;
+        /* gap: 2rem; */
     }
     .modal-cont{
         width: 55vw;
-        left: 30%;
-        right: auto;
-        top: 3rem;
+        left: 33%;
+        top: 5rem;
     }
     
     
     .action-btn-cont{
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: space-between;
         width: 100%;
         align-items: center;
-        height: 25%;
+        height: auto;
         gap: 1rem;
+        padding-bottom: 5px;
     }
     .action-btn-cont>*{
-        
-        height: 3.5rem;
-        width: 4rem;
+        font-size: 2.5rem;
+        height: 4.5rem;
+        width: 4.5rem;
     }
     
     
