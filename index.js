@@ -11,11 +11,9 @@ const search_bar = document.querySelector(".search");
 let modalflag= false;
 let priorityColorSelected="lightpink";
 
-
 let ticketArr = [];
 if(localStorage.getItem("tasks"))
 ticketArr = JSON.parse(localStorage.getItem("tasks"));
-console.log(ticketArr);
 
 //re-creating the stored tickets
 if(ticketArr!=null)
@@ -37,27 +35,16 @@ function generateId(){
     return id;
 }
 
-//Adding the new ticket to main ticket cont
-
-// if ticketId is empty that means we are creating a fresh new 
-// ticket which also needs to be added to array as storage.
-// But as we also at staring of new session need to render ticket 
-// already stored.For that also we will use this(create) method but we  
-// dont need to add it to the storage again.
-// So basically we need to take care that tickets we are adding to the 
-// array(storage) are only the new ones not ones that we ourself
-// pulled from array to render. 
-// All the new tickets will have empty id whereas the ones 
-// we are re-creating from array will alread have one
 function createTicket(ticketContent,ticketColor,ticketId){
     
     if(ticketId===""){
         //if ticket is new then only add to array and update storage
         ticketId=generateId();
+        ticketContent=ticketContent.trim();
         ticketArr.push({ticketContent,ticketColor,ticketId});
         localStorage.setItem("tasks",JSON.stringify(ticketArr));
     }
-
+    
     const ticket = document.createElement("div");
         ticket.innerHTML=`<div class="ticket-color ${ticketColor}"></div>
         <div class="ticket-id">${ticketId}</div>
@@ -94,7 +81,7 @@ function handleLock(ticket){
             const ticketIdforUpdate =ticket.querySelector(".ticket-id").innerHTML;
             const indexTobeUpdated = ticketArr.findIndex((t) => t.ticketId == ticketIdforUpdate);
 
-            ticketArr[indexTobeUpdated].ticketContent=textarea.innerText;
+            ticketArr[indexTobeUpdated].ticketContent=textarea.innerText.trim();
             localStorage.setItem("tasks",JSON.stringify(ticketArr));
         }
     });
@@ -227,13 +214,14 @@ mainticketcont.addEventListener("click",(event)=>{
 //search feature************
 search_bar.addEventListener("keyup",(event)=>{
 
-    console.log(search_bar.value);
-    const textToFind= search_bar.value;
+    
+    const textToFind= search_bar.value.toLowerCase();
+
     const allticket = mainticketcont.querySelectorAll(".ticket-cont");
     allticket.forEach((ticket)=>{
 
-        const ticketText = ticket.querySelector(".task-area").innerText;
-        //console.log(ticketText)
+        const ticketText = ticket.querySelector(".task-area").innerText.toLowerCase();
+
         if(ticketText.includes(textToFind))
         ticket.style.display="block";
         else
